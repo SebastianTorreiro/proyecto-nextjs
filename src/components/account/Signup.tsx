@@ -44,7 +44,7 @@ const Signup = () => {
 
     return (
         <section className="flex items-center justify-center w-full pt-12 xs:h-80vh">
-            <form onSubmit={handleSubmit} className="p-6 xs:p-10 w-full max-w-350 flex flex-col justify-between items-center gap-2.5	
+            <form onSubmit={handleSubmit} className="p-6 xs:p-10 w-1/3 max-w-350 flex flex-col justify-between items-center gap-2.5	
                 border border-solid border-[#2E2E2E] bg-[#0A0A0A] rounded-md">
                 {error && <div className="text-[#FF6166] flex items-center justify-center gap-2">
                     <svg
@@ -64,9 +64,9 @@ const Signup = () => {
                     </svg>
                     <div className="text-sm">{error}</div>
                 </div>}
-                <h1 className="w-full mb-5 text-2xl font-bold">Signup</h1>
+                <h1 className="w-full mb-5 text-2xl font-bold flex items-center justify-center ">Signup</h1>
 
-                <label className={labelStyles}>Fullname:</label>
+                <label className={labelStyles}>Fullname</label>
                 <input
                     type="text"
                     placeholder="Fullname"
@@ -74,7 +74,7 @@ const Signup = () => {
                     name="name"
                 />
 
-                <label className={labelStyles}>Email:</label>
+                <label className={labelStyles}>Email</label>
                 <input
                     type="email"
                     placeholder="Email"
@@ -82,7 +82,7 @@ const Signup = () => {
                     name="email"
                 />
 
-                <label className={labelStyles}>Password:</label>
+                <label className={labelStyles}>Password</label>
                 <div className="flex w-full">
                     <input
                         type={showPassword ? "text" : "password"}
@@ -131,7 +131,7 @@ const Signup = () => {
                     </button>
                 </div>
 
-                <label className={labelStyles}>Phone:</label>
+                <label className={labelStyles}>Phone</label>
                 <input
                     type="text"
                     placeholder="Phone (not required)"

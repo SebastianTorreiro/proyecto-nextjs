@@ -40,7 +40,7 @@ const Signin = () => {
     return (
         <section className="flex items-center justify-center w-full pt-12 xs:h-80vh">
             <form
-                className="p-6 xs:p-10	w-full max-w-350 flex flex-col justify-between items-center gap-2.5	
+                className="p-6 xs:p-10	w-1/3 max-w-350 flex flex-col justify-between items-center gap-2.5	
                 border border-solid border-[#2E2E2E] bg-[#0A0A0A] rounded-md"
                 onSubmit={handleSubmit}
             >
@@ -64,7 +64,7 @@ const Signin = () => {
                 </div>}
                 <h1 className="w-full mb-5 text-2xl font-bold">Signin</h1>
 
-                <label className={labelStyles}>Email:</label>
+                <label className={labelStyles}>Email</label>
                 <input
                     type="email"
                     placeholder="Email"
@@ -72,7 +72,7 @@ const Signin = () => {
                     name="email"
                 />
 
-                <label className={labelStyles}>Password:</label>
+                <label className={labelStyles}>Password</label>
                 <div className="flex w-full">
                     <input
                         type={showPassword ? "text" : "password"}
