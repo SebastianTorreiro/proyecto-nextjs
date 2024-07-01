@@ -4,20 +4,20 @@ import { FormEvent, useEffect, useState } from "react";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-// import { useSession } from 'next-auth/react';
+import { useSession } from 'next-auth/react';
 
 const Signin = () => {
-    // const { data: session } = useSession();
+    const { data: session } = useSession();
     const labelStyles = "w-full text-sm";
     const [error, setError] = useState("");
     const [showPassword, setShowPassword] = useState(false);
     const router = useRouter();
 
-    // useEffect(() => {
-    //     if (session?.user) {
-    //         window.location.reload();
-    //     }
-    // }, [session]);
+    useEffect(() => {
+        if (session?.user) {
+            window.location.reload();
+        }
+    }, [session]);
 
     const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
@@ -33,7 +33,7 @@ const Signin = () => {
         };
 
         if (!res?.error) {
-            return router.push("/")
+            return router.push("/aprobadopa")
         };
     };
 
